@@ -1,0 +1,13 @@
+.main-pokemon{
+  margin: 10px auto 10px auto;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-pokemon app-pokemons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}

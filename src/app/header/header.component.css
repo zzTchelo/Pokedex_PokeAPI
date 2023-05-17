@@ -1,0 +1,44 @@
+.header-bar{
+  background-color: rgb(141, 37, 37);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-bar .search-bar{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input{
+  width: 400px;
+  height: 30px;
+  border: 0px;
+  outline: none;
+  padding-left: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+button{
+  width: 30px;
+  height: 30px;
+  border: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  background-color: black;
+}
+
+.header-bar button:hover{
+  color:orange;
+  cursor: pointer;
+}
+
+.mypkdex{
+  font-size: 30px;
+}
