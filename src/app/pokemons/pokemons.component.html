@@ -1,7 +1,11 @@
-<div class="pokemons-card" *ngFor="let pokemon of pokemons.results">
-  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon.url.split('/')[6]}}.png" alt="Imagem do Pokemon" class="imagem-pokemon" />
-      <br>
-    <label for="pokemon-nome" class="pokemon-nome">
-      {{ pokemon.name.toUpperCase() }}
-    </label>
+<div class="pokemon-app">
+  <div class="pokemons-card" *ngFor="let pokemon of pokemons.results">
+    <div routerLink="/pokemon/{{pokemon.name}}">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon.url.split('/')[6]}}.png" alt="Imagem do Pokemon" class="imagem-pokemon" />
+        <br>
+      <label for="pokemon-nome" class="pokemon-nome">
+        {{ pokemon.name.toUpperCase() }}
+      </label>
+    </div>
+  </div>
 </div>
