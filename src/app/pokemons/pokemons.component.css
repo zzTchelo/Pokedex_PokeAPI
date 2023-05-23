@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   width: 100%;
   gap: 10px;
+  justify-content: center;
 }
 
 .pokemons-card{

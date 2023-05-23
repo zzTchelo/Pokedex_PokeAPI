@@ -4,9 +4,9 @@ import { PokemonsComponent } from './pokemons/pokemons.component';
 import { PokemonComponent } from './pokemons/pokemon/pokemon.component';
 
 const routes: Routes = [
-  {path: 'home', component: PokemonsComponent},
-  {path: 'pokemon/:nome', component: PokemonComponent},
-  {path: '', redirectTo: 'home', pathMatch:'full'}
+  {path: 'Pokemons', component: PokemonsComponent},
+  {path: 'Pokemons/:nome', component: PokemonComponent},
+  {path: '', redirectTo: 'Pokemons', pathMatch:'full'}
 ];
 
 @NgModule({

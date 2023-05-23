@@ -1,4 +1,4 @@
-import { pokemon } from './pokemon';
+import { pokemon, pokemon_info } from './pokemon';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -19,7 +19,7 @@ export class PokemonService {
     return this.http.get<pokemon>(this.API);
   }
 
-  informacoesPokemon (url : string) : Observable<undefined>{
-    return this.http.get<undefined>(url);
+  informacoesPokemon (url : string) : Observable<pokemon_info>{
+    return this.http.get<pokemon_info>(url);
   }
 }

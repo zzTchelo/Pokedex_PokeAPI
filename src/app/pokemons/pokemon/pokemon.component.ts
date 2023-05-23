@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { pokemon_info } from './../../pokemon';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { PokemonService } from 'src/app/pokemon.service';
 
 @Component({
@@ -8,18 +8,19 @@ import { PokemonService } from 'src/app/pokemon.service';
   templateUrl: './pokemon.component.html',
   styleUrls: ['./pokemon.component.css']
 })
-export class PokemonComponent {
-  public pokemon : string | null = "";
+export class PokemonComponent implements OnInit{
+  public pokemon: pokemon_info = {id: 0, name: "", sprites : {front_default : ""}};
 
   constructor(
     private service : PokemonService,
-    private http : HttpClient,
     private route : ActivatedRoute,
-    private router : Router
   ) { }
 
-  ngOnInit() : string | null {
-    const pokemon = this.route.snapshot.paramMap.get('nome')
-    return this.pokemon = pokemon
+  ngOnInit() {
+    const nome = this.route.snapshot.paramMap.get('nome')
+    let url = `https://pokeapi.co/api/v2/pokemon/${nome}/`
+    this.service.informacoesPokemon(url).subscribe((pokemon_info) =>{
+      this.pokemon = pokemon_info
+    })
   }
 }
