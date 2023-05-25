@@ -1,12 +1,27 @@
-export interface pokemon {
+export interface IPokemon {
   count : number,
   next : string,
   previous : string,
-  results : [{name: String, url: String}]
+  results : [{
+    name: String,
+    url: String
+  }]
 }
 
-export interface pokemon_info {
+export interface IPokemon_info {
   id : number,
   name : string,
-  sprites : {front_default : string}
+  base_experience : number,
+  height : number,
+  weight : number,
+  sprites : {
+    front_default : string
+  },
+  types : [{
+    slot: number,
+    type : {
+      name : string,
+      url : string
+    }
+  }]
 }

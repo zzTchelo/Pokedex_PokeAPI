@@ -1,9 +1,34 @@
-<div class="pokemon-card">
-  <img src="{{pokemon.sprites.front_default}}" alt="Imagem_{{pokemon.name}}" class="img_pokemon"/>
-  <label class="name_pokemon">
-    <strong class="id_pokemon">
-      #{{ pokemon.id }}
-    </strong>
-    {{ pokemon.name.toUpperCase() }}
-  </label>
+<div class="pokemon-pag">
+  <div class="lateral-bar">
+    <div class="pokemon-card">
+      <img src="{{pokemon.sprites.front_default}}" alt="Imagem_{{pokemon.name}}" class="img_pokemon"/>
+      <label class="name_pokemon">
+        <strong class="id_pokemon">
+          #{{ pokemon.id }}
+        </strong>
+        {{ pokemon.name.toUpperCase() }}
+      </label>
+    </div>
+
+    <div class="caracteristicas">
+      <p>
+        <strong>Experiência base: </strong> {{ pokemon.base_experience }}
+      </p>
+      <p>
+        <strong>Altura: </strong> {{ pokemon.height }}
+      </p>
+      <p>
+        <strong>Peso: </strong> {{ pokemon.weight }}
+      </p>
+    </div>
+  </div>
+
+  <div class="tipos-header">
+
+    <div class="tipos-pokemon" *ngFor="let types of pokemon.types">
+        <label for="Tipos" class="label-tipo"> {{ types.type.name.toUpperCase() }}</label>
+    </div>
+  </div>
 </div>
+
+

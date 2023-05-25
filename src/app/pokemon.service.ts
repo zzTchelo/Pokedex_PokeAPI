@@ -1,4 +1,4 @@
-import { pokemon, pokemon_info } from './pokemon';
+import { IPokemon, IPokemon_info } from './pokemon';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -15,11 +15,11 @@ export class PokemonService {
   private readonly API : string = 'https://pokeapi.co/api/v2/pokemon?limit=151'
 
 
-  listaPokemons(): Observable<pokemon>{
-    return this.http.get<pokemon>(this.API);
+  listaPokemons(): Observable<IPokemon>{
+    return this.http.get<IPokemon>(this.API);
   }
 
-  informacoesPokemon (url : string) : Observable<pokemon_info>{
-    return this.http.get<pokemon_info>(url);
+  informacoesPokemon (url : string) : Observable<IPokemon_info>{
+    return this.http.get<IPokemon_info>(url);
   }
 }

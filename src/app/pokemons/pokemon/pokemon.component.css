@@ -1,3 +1,7 @@
+.pokemon-pag{
+  display: flex;
+}
+
 .pokemon-card{
   width: 350px;
   height: 400px;
@@ -13,7 +17,6 @@
 .pokemon-card .img_pokemon{
   display: flex;
   justify-content: center;
-
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -24,7 +27,6 @@
   margin-bottom: 0px;
   font-size: xx-large;
   display: flex;
-
   justify-content: center;
   /*background-color: rgba(112, 112, 112, 0.4);*/
 }
@@ -32,3 +34,50 @@
 .id_pokemon{
   color:rgb(197, 5, 5);
 }
+
+.caracteristicas{
+  font-size: x-large;
+  padding: 10px 0px;
+}
+
+.caracteristicas p{
+  padding: 5px 0px;
+  margin-left: 40px;
+}
+
+.lateral-bar{
+  /* border: 1px solid red; */
+  width: 370px;
+}
+
+.tipos-header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap:50px;
+  height: 100px;
+  border: 1px solid blue;
+  width: 100%;
+
+  margin: 10px;
+}
+
+.tipos-pokemon{
+  border: 5px solid rgba(112, 112, 112);
+  border-radius: 20px;
+  background-color: white;
+}
+
+.label-tipo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: xx-large;
+  height: 60px;
+  width: 200px;
+}
+
+
