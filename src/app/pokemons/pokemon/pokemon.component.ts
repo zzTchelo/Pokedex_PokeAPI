@@ -11,7 +11,9 @@ import { PokemonService } from 'src/app/pokemon.service';
 export class PokemonComponent implements OnInit{
   public pokemon: IPokemon_info = {id: 0, name: "", base_experience : 0, height : 0, weight : 0,
     sprites : {front_default : ""},
-    types : [{ slot: 0, type : { name : "", url : ""}}]};
+    types : [{ slot: 0, type : { name : "", url : ""}}],
+    abilities : [{is_hidden : false, slot : 0, ability : {name : "", url : ""}}]
+  };
 
   constructor(
     private service : PokemonService,

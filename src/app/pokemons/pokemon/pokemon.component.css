@@ -28,7 +28,6 @@
   font-size: xx-large;
   display: flex;
   justify-content: center;
-  /*background-color: rgba(112, 112, 112, 0.4);*/
 }
 
 .id_pokemon{
@@ -38,6 +37,13 @@
 .caracteristicas{
   font-size: x-large;
   padding: 10px 0px;
+  background-color: rgba(112, 112, 112, 0.1);
+  width:90%;
+
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .caracteristicas p{
@@ -46,8 +52,14 @@
 }
 
 .lateral-bar{
-  /* border: 1px solid red; */
   width: 370px;
+}
+
+.lateral-bar hr {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgb(85, 85, 85);
 }
 
 .tipos-header{
@@ -55,13 +67,9 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
-  gap:50px;
+  gap:15%;
   height: 100px;
-  border: 1px solid blue;
   width: 100%;
-
-  margin: 10px;
 }
 
 .tipos-pokemon{
@@ -74,10 +82,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: xx-large;
   height: 60px;
   width: 200px;
 }
 
+.informacoes-pokemon{
+  width: 100%;
+  margin: 10px;
+}
 
+.informacoes-pokemon hr{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.habilidades-pokemon{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.habilidades-pokemon h1{
+  margin: 15px 0px;
+}
+
+.habilidades-passivas p{
+  font-size: larger;
+  margin: 5px 10px;
+}
