@@ -23,7 +23,9 @@ export class PokemonComponent implements OnInit{
     let url = `https://pokeapi.co/api/v2/pokemon/${nome}/`
     this.service.informacoesPokemon(url).subscribe((pokemon_info) =>{
       this.pokemon = pokemon_info
-      console.log(pokemon_info)
+      console.log(this.pokemon.types.map( ({type}) => {
+        return type.url
+      } ))
     })
   }
 }
