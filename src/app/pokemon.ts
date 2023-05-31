@@ -23,5 +23,14 @@ export interface IPokemon_info {
       name : string,
       url : string
     }
+  }],
+  abilities : [{
+    is_hidden : boolean,
+    slot : number,
+    ability : {
+      name : string,
+      url : string
+    }
   }]
+
 }
