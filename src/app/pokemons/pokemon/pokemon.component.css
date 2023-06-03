@@ -5,7 +5,7 @@
 .pokemon-card{
   width: 350px;
   height: 400px;
-  border: 10px solid rgba(112, 112, 112, 0.4);
+  border: 10px solid rgba(112, 112, 112, 0.5);
   border-radius: 20px;
 }
 
@@ -37,7 +37,7 @@
 .caracteristicas{
   font-size: x-large;
   padding: 10px 0px;
-  background-color: rgba(112, 112, 112, 0.1);
+  background-color: rgba(112, 112, 112, 0.4);
   width:90%;
 
   margin-left: auto;
@@ -61,6 +61,8 @@
   margin-right: auto;
   border: 1px solid rgb(85, 85, 85);
 }
+
+/* TIPOS */
 
 .tipos-header{
   display: flex;
@@ -87,6 +89,8 @@
   width: 200px;
 }
 
+/* CARACTERÍSTICAS */
+
 .informacoes-pokemon{
   width: 100%;
   margin: 10px;
@@ -99,18 +103,84 @@
   border: 1px solid rgba(0, 0, 0, 0.4);
 }
 
+/* HABILIDADES */
+.habilidades{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+
+  justify-content: center;
+}
+
+.habilidades h1{
+  margin: 15px 0px;
+  width: 100%;
+}
+
 .habilidades-pokemon{
+  font-size: x-large;
+  margin: 5px 10px;
+
+  width: 25%;
+
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+
+  gap: 10px;
+}
+
+.habilidades-pokemon img {
+  width: 25px;
+  height: 25px;
+}
+
+/* MOVIMENTOS */
+.movimentos h1 {
+  margin: 15px 0px;
+  width: 100%;
+}
+
+.movimentos{
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
 }
 
-.habilidades-pokemon h1{
-  margin: 15px 0px;
-}
-
-.habilidades-passivas p{
+.movimentos-pokemon{
   font-size: larger;
   margin: 5px 10px;
 }
+
+/* STATUS */
+.status h1{
+  margin: 15px 0px;
+}
+
+.status {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.status-pokemon{
+  font-size: larger;
+  margin: 5px 10px;
+
+  display: grid;
+  /*
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 50%; */
+  border: 1px solid red;
+
+}
+

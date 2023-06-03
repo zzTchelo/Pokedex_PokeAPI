@@ -8,6 +8,14 @@ export interface IPokemon {
   }]
 }
 
+export interface IPokemon_card{
+  id : number,
+  name : string,
+  sprites : {
+    front_default : string
+  }
+}
+
 export interface IPokemon_info {
   id : number,
   name : string,
@@ -31,5 +39,19 @@ export interface IPokemon_info {
       name : string,
       url : string
     }
+  }],
+  moves : [{
+    move : {
+      name: string,
+      url : string
+    },
+    version_group_details : [{
+      level_learned_at : number
+    }]
+  }],
+  stats : [{
+    base_stat : number,
+    effort : number,
+    stat : { name: string}
   }]
 }

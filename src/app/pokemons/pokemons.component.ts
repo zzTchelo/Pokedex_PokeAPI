@@ -21,13 +21,13 @@ export class PokemonsComponent implements OnInit {
   ngOnInit() {
     this.service.listaPokemons().subscribe((pokemon) => {
         this.pokemons = pokemon
-        console.log(pokemon)
+        //console.log(pokemon)
 
         this.pokemons.results.map((imagens) =>{
           //this.url_imagens = this.http.get<string>(imagens.url)
-          console.log(imagens.url)
+          //console.log(imagens.url)
           this.service.informacoesPokemon(imagens.url).subscribe((pokemon_info) =>{
-            console.log(pokemon_info)
+            //console.log(pokemon_info)
           })
         })
     })

@@ -12,7 +12,7 @@ export class PokemonService {
     private http : HttpClient
   ) { }
 
-  private readonly API : string = 'https://pokeapi.co/api/v2/pokemon?limit=151'
+  private readonly API : string = 'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0'
 
 
   listaPokemons(): Observable<IPokemon>{

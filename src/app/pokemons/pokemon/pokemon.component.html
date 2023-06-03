@@ -16,11 +16,11 @@
       </p>
       <hr>
       <p>
-        <strong>Altura: </strong> {{ pokemon.height }}
+        <strong>Altura: </strong> {{ (pokemon.height * 0.10).toFixed(2) }} m
       </p>
       <hr>
       <p>
-        <strong>Peso: </strong> {{ pokemon.weight }}
+        <strong>Peso: </strong> {{ (pokemon.weight * 0.10).toFixed(3) }} Kg
       </p>
     </div>
   </div>
@@ -34,18 +34,43 @@
     </div>
     <hr>
 
-    <div class="habilidades-pokemon">
+    <div class="habilidades">
       <h1>
         Habilidades
       </h1>
 
-      <div class="habilidades-passivas" *ngFor="let abilities of pokemon.abilities">
+      <div class="habilidades-pokemon" *ngFor="let abilities of pokemon.abilities">
+        <img src="../../../assets/pngegg.png" alt="">
         <p>
           {{ abilities.ability.name.toUpperCase() }}
         </p>
       </div>
 
     </div>
+
+    <div class="movimentos">
+      <h1>
+        Movimentos
+      </h1>
+
+      <div class="movimentos-pokemon" *ngFor="let moves of pokemon.moves">
+        {{ moves.move.name.toUpperCase() }}
+      </div>
+    </div>
+
+    <div class="status">
+      <h1>
+        Status
+      </h1>
+
+      <div class="status-pokemon" *ngFor="let stat of pokemon.stats">
+        {{ stat.stat.name.toUpperCase() }}:
+
+
+        {{ stat.base_stat }}
+      </div>
+    </div>
+
   </div>
 
 
