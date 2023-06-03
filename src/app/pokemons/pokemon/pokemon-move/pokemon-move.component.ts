@@ -10,7 +10,9 @@ import { PokemonService } from 'src/app/pokemon.service';
 export class PokemonMoveComponent implements OnInit{
   @Input() moveUrl : string = "";
 
-  public movePokemon : IPokemon_move = { id : 0, name : "", accuracy : 0, type : { name : "" }, damage_class : { name : "" }}
+  public movePokemon : IPokemon_move = { id : 0, name : "", accuracy : 0, type : { name : "" }, damage_class : { name : "" },
+  flavor_text_entries : [{ flavor_text : "", language : "", version_group : ""}]
+  };
 
   constructor(
     private service : PokemonService
@@ -19,8 +21,7 @@ export class PokemonMoveComponent implements OnInit{
   ngOnInit(): void {
     this.service.movesPokemon(this.moveUrl).subscribe((move) =>{
       this.movePokemon = move
-      console.log(this.movePokemon)
+      //console.log(move)
     })
   }
-
 }

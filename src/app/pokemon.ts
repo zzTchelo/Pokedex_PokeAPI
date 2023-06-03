@@ -70,5 +70,10 @@ export interface IPokemon_move{
   },
   damage_class : {
     name : string
-  }
+  },
+  flavor_text_entries : [{
+    flavor_text : string,
+    language : string,
+    version_group : string
+  }]
 }
