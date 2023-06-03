@@ -55,3 +55,20 @@ export interface IPokemon_info {
     stat : { name: string}
   }]
 }
+
+export interface IPokemon_ability{
+  id : number,
+  name : string
+}
+
+export interface IPokemon_move{
+  id : number,
+  name : string,
+  accuracy : number,
+  type : {
+    name : string
+  },
+  damage_class : {
+    name : string
+  }
+}

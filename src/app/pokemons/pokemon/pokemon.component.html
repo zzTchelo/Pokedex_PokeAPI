@@ -1,5 +1,6 @@
 <div class="pokemon-pag">
   <div class="lateral-bar">
+        <!-- CARD -->
     <div class="pokemon-card">
       <img src="{{pokemon.sprites.front_default}}" alt="Imagem_pokemon" class="img_pokemon"/>
       <label class="name_pokemon">
@@ -9,7 +10,7 @@
         {{ pokemon.name.toUpperCase() }}
       </label>
     </div>
-
+        <!-- INFO CARD  -->
     <div class="caracteristicas">
       <p>
         <strong>Experiência base: </strong> {{ pokemon.base_experience }}
@@ -24,55 +25,44 @@
       </p>
     </div>
   </div>
-
+  <!-- INFORMAÇÕES -->
   <div class="informacoes-pokemon">
     <hr>
+    <!-- TIPOS -->
     <div class="tipos-header">
       <div class="tipos-pokemon" *ngFor="let types of pokemon.types">
           <label for="Tipos" class="label-tipo">{{ types.type.name.toUpperCase() }}</label>
       </div>
     </div>
     <hr>
-
-    <div class="habilidades">
-      <h1>
-        Habilidades
-      </h1>
-
-      <div class="habilidades-pokemon" *ngFor="let abilities of pokemon.abilities">
-        <img src="../../../assets/pngegg.png" alt="">
-        <p>
-          {{ abilities.ability.name.toUpperCase() }}
-        </p>
+    <!-- INFORMAÇÕES CORPO -->
+    <div class="body-info">
+      <!-- HABILIDADES -->
+        <h1>
+          HABILIDADES
+        </h1>
+      <div class="habilidades">
+        <div *ngFor="let abilities of pokemon.abilities">
+          <app-pokemon-ability [abilityUrl]="abilities.ability.url"></app-pokemon-ability>
+        </div>
+      </div>
+      <!-- MOVIMENTOS -->
+        <h1>
+          MOVIMENTOS
+        </h1>
+      <div *ngFor="let moves of pokemon.moves">
+        <app-pokemon-move [moveUrl]="moves.move.url"></app-pokemon-move>
+      </div>
+      <!-- STATUS -->
+      <div class="status">
+        <h1>
+          STATUS
+        </h1>
+        <div class="status-pokemon" *ngFor="let stat of pokemon.stats">
+          {{ stat.stat.name.toUpperCase() }}: {{ stat.base_stat }}
+        </div>
       </div>
 
     </div>
-
-    <div class="movimentos">
-      <h1>
-        Movimentos
-      </h1>
-
-      <div class="movimentos-pokemon" *ngFor="let moves of pokemon.moves">
-        {{ moves.move.name.toUpperCase() }}
-      </div>
-    </div>
-
-    <div class="status">
-      <h1>
-        Status
-      </h1>
-
-      <div class="status-pokemon" *ngFor="let stat of pokemon.stats">
-        {{ stat.stat.name.toUpperCase() }}:
-
-
-        {{ stat.base_stat }}
-      </div>
-    </div>
-
   </div>
-
-
-
 </div>

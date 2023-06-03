@@ -1,0 +1,33 @@
+.move-card{
+  margin: 10px 0px;
+  padding: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.4);;
+  border-radius: 15px;
+}
+
+.move-card:hover{
+  background-color: rgba(245, 189, 189, 0.5);
+  cursor: pointer;
+}
+
+.move-card hr {
+  margin-top: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.move-name{
+  font-size: larger;
+}
+
+.move-id {
+  font-size: large;
+}
+
+.move-acurracy{
+  font-size: large;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.move-descricao{
+  margin: 10px 0px;
+}

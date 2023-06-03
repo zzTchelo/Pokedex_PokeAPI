@@ -1,0 +1,14 @@
+.habilidades-pokemon{
+  font-size: x-large;
+  margin: 5px 10px;
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.habilidades-pokemon img {
+  width: 25px;
+  height: 25px;
+}

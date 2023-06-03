@@ -9,6 +9,8 @@ import { PokemonsComponent } from './pokemons/pokemons.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonComponent } from './pokemons/pokemon/pokemon.component';
 import { PokemonCardComponent } from './pokemons/pokemon-card/pokemon-card.component';
+import { PokemonAbilityComponent } from './pokemons/pokemon/pokemon-ability/pokemon-ability.component';
+import { PokemonMoveComponent } from './pokemons/pokemon/pokemon-move/pokemon-move.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { PokemonCardComponent } from './pokemons/pokemon-card/pokemon-card.compo
     FooterComponent,
     PokemonsComponent,
     PokemonComponent,
-    PokemonCardComponent
+    PokemonCardComponent,
+    PokemonAbilityComponent,
+    PokemonMoveComponent
   ],
   imports: [
     BrowserModule,

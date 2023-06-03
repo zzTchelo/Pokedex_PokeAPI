@@ -103,59 +103,26 @@
   border: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-/* HABILIDADES */
-.habilidades{
+/* BODY INFO */
+.body-info{
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+}
 
+.body-info h1{
+  margin: 15px 0px;
+  font-size: x-large;
+}
+
+/* HABILIDADES */
+.habilidades{
   display: flex;
   flex-wrap: wrap;
   gap: 5%;
-
   justify-content: center;
-}
-
-.habilidades h1{
-  margin: 15px 0px;
-  width: 100%;
-}
-
-.habilidades-pokemon{
-  font-size: x-large;
-  margin: 5px 10px;
-
-  width: 25%;
-
-  display: flex;
-  justify-content: center;
-  vertical-align: middle;
-
-  gap: 10px;
-}
-
-.habilidades-pokemon img {
-  width: 25px;
-  height: 25px;
-}
-
-/* MOVIMENTOS */
-.movimentos h1 {
-  margin: 15px 0px;
-  width: 100%;
-}
-
-.movimentos{
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-}
-
-.movimentos-pokemon{
-  font-size: larger;
-  margin: 5px 10px;
+  margin: 10px 0px;
 }
 
 /* STATUS */
@@ -175,11 +142,6 @@
   margin: 5px 10px;
 
   display: grid;
-  /*
-  margin-left: auto;
-  margin-right: auto;
-
-  width: 50%; */
   border: 1px solid red;
 
 }
