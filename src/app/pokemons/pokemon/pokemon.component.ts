@@ -15,6 +15,8 @@ export class PokemonComponent implements OnInit{
     abilities : [{is_hidden : false, slot : 0, ability : {name : "", url : ""}}]
   };
 
+  private URL_Abilities : string = "";
+
   constructor(
     private service : PokemonService,
     private route : ActivatedRoute,
@@ -25,9 +27,14 @@ export class PokemonComponent implements OnInit{
     let url = `https://pokeapi.co/api/v2/pokemon/${nome}/`
     this.service.informacoesPokemon(url).subscribe((pokemon_info) =>{
       this.pokemon = pokemon_info
-      console.log(this.pokemon.types.map( ({type}) => {
-        return type.url
-      } ))
+
+      this.pokemon.types.map( ({type}) => {
+        this.URL_Abilities = type.url
+      })
+
+      this.service.informacoesPokemon(this.URL_Abilities).subscribe((descricaoHabilidade) => {
+        console.log(descricaoHabilidade)
+      })
     })
   }
 }

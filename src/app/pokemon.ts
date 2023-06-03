@@ -3,8 +3,8 @@ export interface IPokemon {
   next : string,
   previous : string,
   results : [{
-    name: String,
-    url: String
+    name: string,
+    url: string
   }]
 }
 
@@ -32,5 +32,4 @@ export interface IPokemon_info {
       url : string
     }
   }]
-
 }
