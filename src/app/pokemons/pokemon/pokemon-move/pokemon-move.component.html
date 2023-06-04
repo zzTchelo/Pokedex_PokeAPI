@@ -2,8 +2,12 @@
     <strong class="move-id">#{{ movePokemon.id }}</strong>&nbsp;
     <span class="move-name" >{{ movePokemon.name.toUpperCase() }}</span>&nbsp;|
     <span class="move-class"><i>{{ movePokemon.damage_class.name.toUpperCase() }}</i></span>&nbsp;|
-    <strong class="move-power">Power: {{ movePokemon.power }}</strong>&nbsp;|
-    <strong class="move-acurracy">Accuracy: {{ movePokemon.accuracy }}</strong>&nbsp;|
+    <span *ngIf="movePokemon.power > 0 ">
+      <strong class="move-power">  Power: {{ movePokemon.power }}</strong>&nbsp;|
+    </span>
+    <span *ngIf="movePokemon.accuracy > 0 ">
+      <strong class="move-acurracy">Accuracy: {{ movePokemon.accuracy }}</strong>&nbsp;|
+    </span>
     <strong class="move-pp">PP: {{ movePokemon.pp }}</strong>&nbsp;|
     <strong class=""> {{ movePokemon.type.name.toUpperCase() }} </strong>
     <!--

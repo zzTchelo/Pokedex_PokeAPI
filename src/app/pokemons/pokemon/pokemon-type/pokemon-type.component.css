@@ -11,9 +11,9 @@
 .type-size-normal{
   border: 0px solid rgb(0, 0, 0);
   border-radius: 25px;
-  background-color: rgb(116, 116, 116);
+  background-color: rgb(204, 204, 204);
   margin: 15px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .type-size-water{
@@ -35,7 +35,7 @@
 .type-size-fire{
   border: 0px solid rgb(0, 0, 0);
   border-radius: 25px;
-  background-color: rgb(175, 35, 35);
+  background-color: rgb(214, 34, 34);
   margin: 15px;
   color: white;
 }
@@ -60,6 +60,94 @@
   border: 0px solid rgb(0, 0, 0);
   border-radius: 25px;
   background-color: rgb(104, 148, 47);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-electric{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(199, 142, 36);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-ground{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(167, 100, 24);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-fairy{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(228, 77, 122);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-fighting{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(133, 43, 20);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-psychic{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(202, 26, 70);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-rock{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(158, 52, 25);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-steel{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(122, 122, 122);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-ice{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(30, 189, 201);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-ghost{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(56, 0, 161);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-dragon{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(0, 15, 218);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-dark{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(12, 12, 12);
   margin: 15px;
   color: white;
 }
