@@ -28,6 +28,16 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
+.move-power{
+  font-size: large;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.move-pp{
+  font-size: large;
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .move-descricao{
   margin: 10px 0px;
 }

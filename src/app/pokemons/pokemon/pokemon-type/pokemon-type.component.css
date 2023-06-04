@@ -1,0 +1,65 @@
+.type-box-size{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  height: 60px;
+  width: 200px;
+}
+
+/* TIPOS CARDS */
+.type-size-normal{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(116, 116, 116);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-water{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(10, 95, 192);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-grass{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(42, 160, 78);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-fire{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(175, 35, 35);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-flying{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(79, 139, 163);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-poison{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(102, 45, 177);
+  margin: 15px;
+  color: white;
+}
+
+.type-size-bug{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: rgb(104, 148, 47);
+  margin: 15px;
+  color: white;
+}

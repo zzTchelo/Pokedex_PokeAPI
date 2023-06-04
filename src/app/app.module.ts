@@ -11,6 +11,7 @@ import { PokemonComponent } from './pokemons/pokemon/pokemon.component';
 import { PokemonCardComponent } from './pokemons/pokemon-card/pokemon-card.component';
 import { PokemonAbilityComponent } from './pokemons/pokemon/pokemon-ability/pokemon-ability.component';
 import { PokemonMoveComponent } from './pokemons/pokemon/pokemon-move/pokemon-move.component';
+import { PokemonTypeComponent } from './pokemons/pokemon/pokemon-type/pokemon-type.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PokemonMoveComponent } from './pokemons/pokemon/pokemon-move/pokemon-mo
     PokemonComponent,
     PokemonCardComponent,
     PokemonAbilityComponent,
-    PokemonMoveComponent
+    PokemonMoveComponent,
+    PokemonTypeComponent
   ],
   imports: [
     BrowserModule,

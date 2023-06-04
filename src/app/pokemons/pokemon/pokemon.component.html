@@ -24,28 +24,29 @@
         <strong>Peso: </strong> {{ (pokemon.weight * 0.10).toFixed(3) }} Kg
       </p>
     </div>
+      <!-- HABILIDADES -->
+    <div class="habilidades">
+      <h1>
+        HABILIDADES
+      </h1>
+      <div *ngFor="let abilities of pokemon.abilities">
+        <app-pokemon-ability [abilityUrl]="abilities.ability.url"></app-pokemon-ability>
+      </div>
+    </div>
   </div>
   <!-- INFORMAÇÕES -->
   <div class="informacoes-pokemon">
     <hr>
     <!-- TIPOS -->
-    <div class="tipos-header">
-      <div class="tipos-pokemon" *ngFor="let types of pokemon.types">
-          <label for="Tipos" class="label-tipo">{{ types.type.name.toUpperCase() }}</label>
+    <div class="types">
+      <div *ngFor="let type of pokemon.types">
+        <app-pokemon-type [types]="type.type.name"></app-pokemon-type>
       </div>
     </div>
+
     <hr>
     <!-- INFORMAÇÕES CORPO -->
     <div class="body-info">
-      <!-- HABILIDADES -->
-        <h1>
-          HABILIDADES
-        </h1>
-      <div class="habilidades">
-        <div *ngFor="let abilities of pokemon.abilities">
-          <app-pokemon-ability [abilityUrl]="abilities.ability.url"></app-pokemon-ability>
-        </div>
-      </div>
       <!-- MOVIMENTOS -->
         <h1>
           MOVIMENTOS
@@ -53,7 +54,7 @@
       <div *ngFor="let moves of pokemon.moves">
         <app-pokemon-move [moveUrl]="moves.move.url"></app-pokemon-move>
       </div>
-      <!-- STATUS -->
+      <!-- STATUS
       <div class="status">
         <h1>
           STATUS
@@ -62,7 +63,7 @@
           {{ stat.stat.name.toUpperCase() }}: {{ stat.base_stat }}
         </div>
       </div>
-
+      -->
     </div>
   </div>
 </div>

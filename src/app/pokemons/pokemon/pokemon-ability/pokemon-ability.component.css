@@ -1,10 +1,9 @@
 .habilidades-pokemon{
   font-size: x-large;
-  margin: 5px 10px;
+  margin: 25px 15px;
   width: 100%;
   gap: 10px;
   display: flex;
-  justify-content: center;
   vertical-align: middle;
 }
 

@@ -65,6 +65,8 @@ export interface IPokemon_move{
   id : number,
   name : string,
   accuracy : number,
+  power : number,
+  pp : number,
   type : {
     name : string
   },
