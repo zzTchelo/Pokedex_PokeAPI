@@ -12,6 +12,7 @@ import { PokemonCardComponent } from './pokemons/pokemon-card/pokemon-card.compo
 import { PokemonAbilityComponent } from './pokemons/pokemon/pokemon-ability/pokemon-ability.component';
 import { PokemonMoveComponent } from './pokemons/pokemon/pokemon-move/pokemon-move.component';
 import { PokemonTypeComponent } from './pokemons/pokemon/pokemon-type/pokemon-type.component';
+import { LoadMoreButtonComponent } from './pokemons/pokemon/load-more-button/load-more-button.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PokemonTypeComponent } from './pokemons/pokemon/pokemon-type/pokemon-ty
     PokemonCardComponent,
     PokemonAbilityComponent,
     PokemonMoveComponent,
-    PokemonTypeComponent
+    PokemonTypeComponent,
+    LoadMoreButtonComponent
   ],
   imports: [
     BrowserModule,

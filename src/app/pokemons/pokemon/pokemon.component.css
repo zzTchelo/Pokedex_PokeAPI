@@ -142,3 +142,9 @@
 
 }
 
+/* BOTAO CARREGAR MAIS */
+.load-more-button{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}

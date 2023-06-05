@@ -1,0 +1,17 @@
+.load-more-button{
+  text-align: center;
+  padding: 10px 15px;
+  background-color: rgb(133, 132, 132);
+  border: 1px solid white;
+  color: white;
+  align-self: center;
+  border-radius: 15px;
+
+}
+
+.load-more-button:hover{
+  color: red;
+  background-color: black;
+  border: 1px solid red;
+  cursor: pointer;
+}

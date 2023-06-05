@@ -1,6 +1,6 @@
 import { IPokemon, IPokemon_ability, IPokemon_info, IPokemon_move } from './pokemon';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -15,6 +15,16 @@ export class PokemonService {
   private readonly API : string = 'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0'
 
   listaPokemons () : Observable<IPokemon>{
+
+    /*
+    const offset = 0;
+    const limit = 6;
+
+    let params = new HttpParams()
+      .set("_limit", limit)
+      .set("_offset", offset)
+    */
+
     return this.http.get<IPokemon>(this.API);
   }
 
