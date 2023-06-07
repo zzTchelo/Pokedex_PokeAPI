@@ -5,33 +5,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 15px;
 }
 
-.header-bar .search-bar{
-  width: 80%;
+.search-bar{
+  width: 60%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
 }
 
 input{
-  width: 400px;
-  height: 30px;
+  width: 1000px;
+  height: 50px;
   border: 0px;
   outline: none;
   padding-left: 20px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  font-size: 20px;
 }
 
 button{
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border: 0px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   color: white;
   background-color: black;
+  font-size: 20px;
 }
 
 .header-bar button:hover{
@@ -40,5 +42,15 @@ button{
 }
 
 .mypkdex{
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: italic;
+
+  color: rgb(219, 219, 16);
+  text-shadow:
+          -2px 2px 0px #FFF,
+          -1px 1px 2px #FFF,
+          -1px 1px 2px #FFF,
+          -1px 1px 2px #FFF;
+
 }
