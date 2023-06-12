@@ -11,7 +11,7 @@ export class PokemonCardComponent implements OnInit{
 
   @Input() pokemonUrl : string = "";
 
-  pokemon : IPokemon_card = {  id: 0, name: "", sprites : { front_default : ""}};
+  public pokemon : IPokemon_card = {  id: 0, name: "", sprites : { front_default : ""}};
 
   constructor (
     private service : PokemonService

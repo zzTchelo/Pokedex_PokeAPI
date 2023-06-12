@@ -30,7 +30,6 @@ export class PokemonComponent implements OnInit{
     let url = `https://pokeapi.co/api/v2/pokemon/${nome}/`
     this.service.informacoesPokemon(url).subscribe((pokemon_info) =>{
       this.pokemon = pokemon_info
-      //console.log(pokemon_info)
 
       this.pokemon.types.map( ({type}) => {
         this.URL_Abilities = type.url
@@ -39,10 +38,6 @@ export class PokemonComponent implements OnInit{
       this.pokemon.moves.map( ({move}) => {
         this.URL_Moves = move.url
       })
-
-      //this.service.informacoesPokemon(this.URL_Abilities).subscribe((descricaoHabilidade) => {
-      //  console.log(descricaoHabilidade)
-      //})
     })
   }
 }

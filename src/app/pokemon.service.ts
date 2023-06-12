@@ -12,20 +12,17 @@ export class PokemonService {
     private http : HttpClient
   ) { }
 
-  private readonly API : string = 'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0'
+  private readonly API : string = 'https://pokeapi.co/api/v2/pokemon?'
 
   listaPokemons () : Observable<IPokemon>{
-
-    /*
     const offset = 0;
-    const limit = 6;
+    const limit = 151;
 
     let params = new HttpParams()
-      .set("_limit", limit)
-      .set("_offset", offset)
-    */
+      .set("limit", limit)
+      .set("offset", offset)
 
-    return this.http.get<IPokemon>(this.API);
+    return this.http.get<IPokemon>(this.API,{params});
   }
 
   informacoesPokemon (url : string) : Observable<IPokemon_info>{
