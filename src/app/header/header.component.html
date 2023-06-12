@@ -1,11 +1,20 @@
 <header class="header-bar">
-  <span class="mypkdex">MyPokeDex</span>
+  <span class="mypkdex" routerLink="/Pokemons">MyPokeDex</span>
   <div class="search-bar">
-    <input type="text"
+    <input
+    type="search"
     name = "pokemonPesquisa"
-    placeholder="Digite o nome do pokemon...">
+    placeholder="Digite o nome do pokemon..."
+    autofocus
+    [(ngModel)]="filter"
+    >
     <button class="search-button">
       <i class="fa-solid fa-magnifying-glass"></i>
     </button>
   </div>
+  <br>
+  <div>
+    {{ filter }}
+  </div>
+
 </header>

@@ -21,6 +21,5 @@ export class PokemonCardComponent implements OnInit{
     this.service.informacoesPokemon(this.pokemonUrl).subscribe((pokemon) =>{
       this.pokemon = pokemon
     })
-
   }
 }

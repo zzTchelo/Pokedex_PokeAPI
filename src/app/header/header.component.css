@@ -45,6 +45,7 @@ button{
   font-size: 40px;
   font-weight: bold;
   font-style: italic;
+  cursor: pointer;
 
   color: rgb(219, 219, 16);
   text-shadow:

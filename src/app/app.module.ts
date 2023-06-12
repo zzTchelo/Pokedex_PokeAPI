@@ -13,6 +13,7 @@ import { PokemonAbilityComponent } from './pokemons/pokemon/pokemon-ability/poke
 import { PokemonMoveComponent } from './pokemons/pokemon/pokemon-move/pokemon-move.component';
 import { PokemonTypeComponent } from './pokemons/pokemon/pokemon-type/pokemon-type.component';
 import { LoadMoreButtonComponent } from './pokemons/pokemon/load-more-button/load-more-button.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LoadMoreButtonComponent } from './pokemons/pokemon/load-more-button/loa
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
