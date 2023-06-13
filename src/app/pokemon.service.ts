@@ -1,7 +1,7 @@
 import { IPokemon, IPokemon_ability, IPokemon_info, IPokemon_move } from './pokemon';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class PokemonService {
     private http : HttpClient
   ) { }
 
-  private readonly API : string = 'https://pokeapi.co/api/v2/pokemon?'
+  private readonly API : string = 'https://pokeapi.co/api/v2/pokemon?';
 
   listaPokemons () : Observable<IPokemon>{
     const offset = 0;

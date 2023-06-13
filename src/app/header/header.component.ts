@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { PokemonsComponent } from '../pokemons/pokemons.component';
+import { Component, OnInit } from '@angular/core';
+import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +9,7 @@ import { PokemonsComponent } from '../pokemons/pokemons.component';
 export class HeaderComponent implements OnInit{
   filter : string  = '';
 
-  constructor(
-    //private filteredPokemons : PokemonsComponent
-  ) {}
+  constructor( ) {}
 
   ngOnInit(): void {
 

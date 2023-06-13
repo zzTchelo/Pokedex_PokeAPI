@@ -1,7 +1,5 @@
 import { PokemonService } from './../pokemon.service';
-import { Component, OnInit } from '@angular/core';
-import { IPokemon } from '../pokemon';
-import { Observable } from 'rxjs';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pokemons',
@@ -11,10 +9,8 @@ import { Observable } from 'rxjs';
 
 
 export class PokemonsComponent implements OnInit {
-
-  private setAllPokemons : any;
+  public filtro : string = '';
   public getAllPokemons : any;
-  //public pokemons : IPokemon_results = {results:[{name: "", url: ""}]};
 
   constructor(
     private service : PokemonService,
@@ -22,15 +18,13 @@ export class PokemonsComponent implements OnInit {
 
   ngOnInit() {
     this.service.listaPokemons().subscribe((pokemons) => {
-      this.setAllPokemons = pokemons;
-      this.getAllPokemons = this.setAllPokemons;
+      if (this.filtro.trim().length > 0){
+        this.getAllPokemons = pokemons.results.filter((results) => {
+          return !results.name.indexOf(this.filtro.toLowerCase())
+        })
+      } else {
+        this.getAllPokemons = pokemons.results
+      }
     })
-  }
-
-  getPokemonsByName (name : String) {
-    const filteredPokemons = this.getAllPokemons.results.filter( (results : any) => {
-      return !results.name.indexOf(name.toLowerCase());
-    })
-      this.getAllPokemons = filteredPokemons;
   }
 }

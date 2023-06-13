@@ -9,17 +9,17 @@
 }
 
 .search-bar{
-  width: 60%;
-  display: flex;
-  justify-content: flex-end;
+  width: 70%;
+  text-align: end;
 }
 
 input{
-  width: 1000px;
+  width: 90% ;
   height: 50px;
   border: 0px;
   outline: none;
   padding-left: 20px;
+  padding-right: 20px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   font-size: 20px;

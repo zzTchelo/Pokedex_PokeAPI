@@ -1,5 +1,5 @@
 <div class="pokemon-app">
-  <div class="pokemons-card" *ngFor="let pokemon of getAllPokemons.results">
+  <div class="pokemons-card" *ngFor="let pokemon of getAllPokemons">
     <div routerLink="/Pokemons/{{pokemon.name}}">
       <app-pokemon-card [pokemonUrl]="pokemon.url"></app-pokemon-card>
     </div>
