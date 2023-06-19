@@ -10,6 +10,7 @@
 .pokemons-card .imagem-pokemon{
   width: 200px;
   height: 200px;
+  transition: all .3s ease-in-out;
 }
 
 .pokemons-card .imagem-pokemon:hover{
@@ -33,6 +34,7 @@
 }
 
 .pokemons-card .pokemon-nome:hover{
+  transition: all .3s ease-in-out;
   filter: brightness(1.1);
   cursor: pointer;
 }

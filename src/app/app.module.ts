@@ -14,6 +14,7 @@ import { PokemonMoveComponent } from './pokemons/pokemon/pokemon-move/pokemon-mo
 import { PokemonTypeComponent } from './pokemons/pokemon/pokemon-type/pokemon-type.component';
 import { LoadMoreButtonComponent } from './pokemons/pokemon/load-more-button/load-more-button.component';
 import { FormsModule } from '@angular/forms';
+import { PokemonSearchComponent } from './pokemons/pokemon-search/pokemon-search.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     PokemonAbilityComponent,
     PokemonMoveComponent,
     PokemonTypeComponent,
-    LoadMoreButtonComponent
+    LoadMoreButtonComponent,
+    PokemonSearchComponent
   ],
   imports: [
     BrowserModule,

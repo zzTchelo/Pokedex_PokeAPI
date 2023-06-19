@@ -1,5 +1,6 @@
 import { PokemonService } from './../pokemon.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-pokemons',
@@ -9,7 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 
 export class PokemonsComponent implements OnInit {
-  public filtro : string = '';
+  public filter : string = '';
   public getAllPokemons : any;
 
   constructor(
@@ -18,9 +19,20 @@ export class PokemonsComponent implements OnInit {
 
   ngOnInit() {
     this.service.listaPokemons().subscribe((pokemons) => {
-      if (this.filtro.trim().length > 0){
+        this.getAllPokemons = pokemons.results
+    })
+  }
+
+  onSearchedTextEntered (searchValue : string) {
+    this.filter = searchValue;
+    //console.log(this.filter);
+    this.service.listaPokemons().subscribe((pokemons) => {
+      if (this.filter.trim().length > 0){
         this.getAllPokemons = pokemons.results.filter((results) => {
-          return !results.name.indexOf(this.filtro.toLowerCase())
+          // -> Retorna pokemon que inicia com o que foi escrito
+          return !results.name.indexOf(this.filter.toLowerCase())
+          // -> Retorna pokemon que contem o que foi escrito
+          //return results.name.includes(this.filter.toLowerCase())
         })
       } else {
         this.getAllPokemons = pokemons.results

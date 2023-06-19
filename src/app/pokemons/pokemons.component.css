@@ -5,3 +5,8 @@
   gap: 10px;
   justify-content: center;
 }
+
+.search-bar{
+  margin: 10px 0px;
+  width: 100%;
+}

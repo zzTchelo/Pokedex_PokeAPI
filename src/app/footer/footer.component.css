@@ -3,10 +3,26 @@ footer{
   height: 45px;
   background-color: rgb(133, 51, 51);
   display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
   justify-content: center;
   align-items: center;
 }
 
 p{
   color: white;
+}
+
+a {
+  padding: 5px;
+  color: white;
+  font-weight: 400;
+  font-size: 22px;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+a:hover {
+  color: white;
+  background-color: black;
 }

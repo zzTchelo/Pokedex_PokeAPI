@@ -1,7 +1,14 @@
+<div class="search-bar">
+  <app-pokemon-search (filteredText)="onSearchedTextEntered($event)"></app-pokemon-search>
+</div>
 <div class="pokemon-app">
   <div class="pokemons-card" *ngFor="let pokemon of getAllPokemons">
-    <div routerLink="/Pokemons/{{pokemon.name}}">
-      <app-pokemon-card [pokemonUrl]="pokemon.url"></app-pokemon-card>
-    </div>
+    <!--
+    <div *ngIf="filter === '' || pokemon.name.toLowerCase().includes(filter)">
+    -->
+      <div routerLink="/Pokemons/{{pokemon.name}}">
+        <app-pokemon-card [pokemonUrl]="pokemon.url"></app-pokemon-card>
+      </div>
+
   </div>
 </div>
