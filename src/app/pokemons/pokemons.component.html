@@ -1,5 +1,13 @@
 <div class="search-bar">
-  <app-pokemon-search (filteredText)="onSearchedTextEntered($event)"></app-pokemon-search>
+  <app-pokemon-search
+    (filteredText)="onSearchedTextEntered($event)"
+    (next)="onNextPage($event)"
+    (previous)="onPreviousPage($event)"
+    [count]="count"
+    [limit]="limit"
+    >
+  </app-pokemon-search>
+
 </div>
 <div class="pokemon-app">
   <div class="pokemons-card" *ngFor="let pokemon of getAllPokemons">

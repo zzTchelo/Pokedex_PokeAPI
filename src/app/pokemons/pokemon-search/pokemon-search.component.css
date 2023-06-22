@@ -40,18 +40,40 @@ input{
   border-radius: 10px;
 }
 
-button{
-  width: 50px;
-  height: 50px;
-  border: 0px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  color: white;
-  background-color: black;
-  font-size: 20px;
+.paginate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-button:hover{
-  color:red;
+.page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: x-large;
+
+  width: 150px;
+  height: 40px;
+
+  border-radius: 20px;
+  border: 2px solid rgba(138, 138, 138, 0.4);
+}
+
+.arrows{
+  width: 50px;
+  height: 50px;
+  font-size: xx-large;
+  border-style: none;
+}
+
+.arrows:hover{
   cursor: pointer;
+  outline: none;
+  border-style: none;
+
+  color: brown;
+  transform: scale(1.1);
+  transition: all .3s ease-in-out;
 }

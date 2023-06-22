@@ -22,4 +22,19 @@
       </button>
     -->
   </div>
+
+  <div class="paginate">
+    <button class="arrows" (click)="onPrevious()">
+      <i class="fa-solid fa-circle-left"></i>
+    </button>
+
+    <p class="page">
+      Página {{ page }}
+    </p>
+
+    <button class="arrows" (click)="onNext()">
+      <i class="fa-solid fa-circle-right"></i>
+    </button>
+  </div>
+
 </div>

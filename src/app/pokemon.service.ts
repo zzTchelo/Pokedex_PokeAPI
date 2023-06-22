@@ -14,9 +14,7 @@ export class PokemonService {
 
   private readonly API : string = 'https://pokeapi.co/api/v2/pokemon?';
 
-  listaPokemons () : Observable<IPokemon>{
-    const offset = 0;
-    const limit = 151;
+  listaPokemons (offset : number, limit : number) : Observable<IPokemon>{
 
     let params = new HttpParams()
       .set("limit", limit)
