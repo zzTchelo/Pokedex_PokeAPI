@@ -17,6 +17,8 @@ export class PokemonComponent implements OnInit{
     stats : [{ base_stat : 0, effort : 0, stat : { name : ""}}]
   };
 
+  public moreMoves : number = 10;
+
   @Input() private URL_Abilities : string = "";
   @Input() private URL_Moves : string = "";
 
@@ -39,5 +41,10 @@ export class PokemonComponent implements OnInit{
         this.URL_Moves = move.url
       })
     })
+  }
+
+  loadMoreMoves(moreMoves : number) {
+    this.moreMoves += moreMoves;
+    console.log(this.moreMoves)
   }
 }
