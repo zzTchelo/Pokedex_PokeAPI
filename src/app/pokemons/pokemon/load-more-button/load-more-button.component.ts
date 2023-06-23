@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-load-more-button',
@@ -13,18 +13,17 @@ export class LoadMoreButtonComponent implements OnInit{
 
   }
 
-  label : string = 'Ver todos';
-  public moreMoves : number = 10;
+  @Input() label : string = '';
+  @Input() qtdMoves : number = 0;
+  @Input() qtdMovesTotal : number = 0;
 
-  @Output() moreMovesEvent : EventEmitter<number> = new EventEmitter<number>();
+  @Output() moreMovesEvent : EventEmitter<boolean> = new EventEmitter<boolean>();
 
   MoreMoves(){
-    this.moreMovesEvent.emit(this.moreMoves)
+    if (this.qtdMoves < this.qtdMovesTotal)
+      this.moreMovesEvent.emit(true)
+
+    if (this.qtdMoves > this.qtdMovesTotal)
+      this.moreMovesEvent.emit(false)
   }
-
-  //this.service.movesPokemon(this.moveUrl).subscribe((move) =>{
-  //  this.movePokemon = move
-    //console.log(move)
-  //})
-
 }

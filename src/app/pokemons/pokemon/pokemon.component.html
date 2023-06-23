@@ -59,10 +59,14 @@
         <app-pokemon-move [moveUrl]="moves.move.url"></app-pokemon-move>
       </div>
 
-      <div class="load-more-button">
-        <app-load-more-button (moreMovesEvent)="loadMoreMoves($event)"></app-load-more-button>
+      <div class="load-more-button" *ngIf="pokemon.moves.length > qtdMovesPerPage">
+        <app-load-more-button
+          (moreMovesEvent)="loadMoreMoves($event)"
+          [qtdMoves]="moreMoves"
+          [qtdMovesTotal]="pokemon.moves.length"
+          [label]="label"
+        ></app-load-more-button>
       </div>
-
 
       <!-- STATUS
       <div class="status">

@@ -27,20 +27,21 @@ export class PokemonsComponent implements OnInit {
   }
 
   onSearchedTextEntered (searchValue : string) {
-    this.service.listaPokemons(0, this.count).subscribe((pokemons) => {
-      if (searchValue.trim().length > 0){
+    if (searchValue.trim().length > 0){
+      this.service.listaPokemons(0, this.count).subscribe((pokemons) => {
         this.getAllPokemons = pokemons.results.filter((results) => {
           // -> Retorna pokemon que inicia com o que foi escrito
           return !results.name.indexOf(searchValue.toLowerCase())
           // -> Retorna pokemon que contem o que foi escrito
           //return results.name.includes(searchValue.toLowerCase())
         })
-      } else {
-        this.service.listaPokemons(this.offset, this.limit).subscribe((pokemons) => {
-          this.getAllPokemons = pokemons.results
-        })
-      }
-    })
+      })
+    } else {
+      this.service.listaPokemons(this.offset, this.limit).subscribe((pokemons) => {
+        this.getAllPokemons = pokemons.results
+      })
+    }
+
   }
 
   onPreviousPage( page : number ){

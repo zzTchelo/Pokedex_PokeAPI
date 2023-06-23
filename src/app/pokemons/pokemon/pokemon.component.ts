@@ -17,10 +17,12 @@ export class PokemonComponent implements OnInit{
     stats : [{ base_stat : 0, effort : 0, stat : { name : ""}}]
   };
 
-  public moreMoves : number = 10;
+  public readonly qtdMovesPerPage : number = 10
+  public moreMoves : number = this.qtdMovesPerPage;
 
   @Input() private URL_Abilities : string = "";
   @Input() private URL_Moves : string = "";
+  label : string = "Ver todos"
 
   constructor(
     private service : PokemonService,
@@ -43,8 +45,13 @@ export class PokemonComponent implements OnInit{
     })
   }
 
-  loadMoreMoves(moreMoves : number) {
-    this.moreMoves += moreMoves;
-    console.log(this.moreMoves)
+  loadMoreMoves(moreMoves : boolean) {
+    if (moreMoves == true){
+      this.moreMoves = Infinity;
+      this.label = "Mostrar menos"
+    } else {
+      this.moreMoves = this.qtdMovesPerPage
+      this.label = "Ver todos"
+    }
   }
 }
