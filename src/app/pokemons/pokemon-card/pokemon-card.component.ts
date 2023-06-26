@@ -14,7 +14,7 @@ export class PokemonCardComponent implements OnInit{
   public pokemon : IPokemon_card = {  id: 0, name: "", sprites : { front_default : ""}};
 
   constructor (
-    private service : PokemonService
+    private service : PokemonService,
   ) { }
 
   ngOnInit () {

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class FavoritesService {
 
-  constructor() { }
+  private storage : Storage = window.localStorage;
 
   getFavoritePokemonByID(){
 
@@ -15,8 +15,8 @@ export class FavoritesService {
 
   }
 
-  setFavoritePokemon(){
-
+  setFavoritePokemon(pokemon : any){
+    this.storage.setItem('favorite', JSON.stringify(pokemon))
   }
 
   updateFavoritePokemon(){
@@ -24,7 +24,7 @@ export class FavoritesService {
   }
 
   deleteFavoritePokemon(){
-
+    this.storage.removeItem('favorite')
   }
 
 }

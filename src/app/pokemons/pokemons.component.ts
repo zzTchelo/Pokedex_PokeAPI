@@ -16,7 +16,7 @@ export class PokemonsComponent implements OnInit {
   private offset : number = 0;
 
   constructor(
-    private service : PokemonService,
+    private service : PokemonService
   ){ }
 
   ngOnInit() {

@@ -1,6 +1,8 @@
 <div class="pokemons-card">
-  <img src="{{ pokemon.sprites.front_default }}" alt="Imagem do Pokemon" class="imagem-pokemon" />
-      <br>
+  <div class="img-card">
+    <img src="{{ pokemon.sprites.front_default }}" alt="Imagem do Pokemon" class="imagem-pokemon" />
+    <app-favorite-icon [pokemonReference]="pokemon.name"></app-favorite-icon>
+  </div>
     <label for="pokemon-nome" class="pokemon-nome">
       <strong>#{{ pokemon.id }}</strong>&nbsp;{{ pokemon.name.toUpperCase() }}
     </label>
