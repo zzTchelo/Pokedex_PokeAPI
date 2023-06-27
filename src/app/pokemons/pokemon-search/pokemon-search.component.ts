@@ -19,9 +19,13 @@ export class PokemonSearchComponent implements OnInit {
   @Input() limit : number = 0
 
   @Output() filteredText : EventEmitter<string> = new EventEmitter<string>();
-
   @Output() previous : EventEmitter<number> = new EventEmitter<number>();
   @Output() next : EventEmitter<number> = new EventEmitter<number>();
+  @Output() allFavoritesEvent : EventEmitter<boolean> = new EventEmitter<boolean>();
+
+  AllFavorites(){
+    this.allFavoritesEvent.emit(true);
+  }
 
   onfilteredText(){
     this.filteredText.emit(this.filter);

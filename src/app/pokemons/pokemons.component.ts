@@ -1,3 +1,4 @@
+import { FavoritesService } from '../favorites.service';
 import { PokemonService } from './../pokemon.service';
 import { Component, OnInit, EventEmitter } from '@angular/core';
 
@@ -16,7 +17,8 @@ export class PokemonsComponent implements OnInit {
   private offset : number = 0;
 
   constructor(
-    private service : PokemonService
+    private service : PokemonService,
+    private favoritePokemons : FavoritesService
   ){ }
 
   ngOnInit() {
@@ -41,7 +43,6 @@ export class PokemonsComponent implements OnInit {
         this.getAllPokemons = pokemons.results
       })
     }
-
   }
 
   onPreviousPage( page : number ){
@@ -57,4 +58,13 @@ export class PokemonsComponent implements OnInit {
       this.getAllPokemons = pokemons.results
     })
   }
+
+  onAllFavorites(event : boolean){
+    console.log(event)
+    this.favoritePokemons.getAllFavorites().subscribe((pokemons) =>{
+      //this.getAllPokemons = pokemons
+      console.log(pokemons.id)
+    })
+  }
+
 }

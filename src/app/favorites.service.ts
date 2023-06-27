@@ -1,30 +1,32 @@
 import { Injectable } from '@angular/core';
+import { IPokemon_info } from './pokemon';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FavoritesService {
 
-  private storage : Storage = window.localStorage;
+  private favoritePokemons : any [] = [];
 
   getFavoritePokemonByID(){
-
-  }
-
-  getAllFavorites(){
-
-  }
-
-  setFavoritePokemon(pokemon : any){
-    this.storage.setItem('favorite', JSON.stringify(pokemon))
   }
 
   updateFavoritePokemon(){
-
   }
 
-  deleteFavoritePokemon(){
-    this.storage.removeItem('favorite')
+  getAllFavorites() : Observable<any>{
+    return JSON.parse(localStorage.getItem('favoriteListPokemon') || "[]");
+  }
+
+  setFavoritePokemon(IPokemon_info : any){
+    this.favoritePokemons.push(IPokemon_info);
+    localStorage.setItem('favoriteListPokemon', JSON.stringify(this.favoritePokemons));
+  }
+
+  deleteFavoritePokemon(pokemonID : number){
+    this.favoritePokemons = this.favoritePokemons.filter(pokemon => pokemon.id !== pokemonID);
+    localStorage.setItem('favoriteListPokemon', JSON.stringify(this.favoritePokemons))
   }
 
 }
