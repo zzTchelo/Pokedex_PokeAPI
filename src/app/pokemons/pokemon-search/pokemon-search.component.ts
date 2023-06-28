@@ -12,8 +12,15 @@ export class PokemonSearchComponent implements OnInit {
   ngOnInit() {
   }
 
+  private showFavorites : boolean = false;
+  private showNotFavorites : boolean = false;
+
+  private readonly favoriteAssigned : string = "fav-icon-assigned";
+  private readonly favoriteNotAssigned : string = "fav-icon-not-assigned";
+
+  public favoriteIconCSS : string = this.favoriteNotAssigned;
   public page : number = 1;
-  filter : string  = '';
+  public filter : string  = '';
 
   @Input() count : number = 0;
   @Input() limit : number = 0
@@ -24,7 +31,15 @@ export class PokemonSearchComponent implements OnInit {
   @Output() allFavoritesEvent : EventEmitter<boolean> = new EventEmitter<boolean>();
 
   AllFavorites(){
-    this.allFavoritesEvent.emit(true);
+    if (!this.showFavorites){
+      this.allFavoritesEvent.emit(true);
+      this.showFavorites = true;
+      this.favoriteIconCSS = this.favoriteAssigned;
+    } else {
+      this.allFavoritesEvent.emit(false);
+      this.showFavorites = false;
+      this.favoriteIconCSS = this.favoriteNotAssigned;
+    }
   }
 
   onfilteredText(){

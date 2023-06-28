@@ -14,7 +14,7 @@
   <div class="pokemons-card" *ngFor="let pokemon of getAllPokemons">
     <!-- <div routerLink="/Pokemons/{{pokemon.name}}"> -->
       <div>
-        <app-pokemon-card [pokemonUrl]="pokemon.url"></app-pokemon-card>
+        <app-pokemon-card [pokemons]="pokemon"></app-pokemon-card>
       </div>
   </div>
 </div>

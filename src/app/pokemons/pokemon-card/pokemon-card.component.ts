@@ -9,7 +9,7 @@ import { PokemonService } from 'src/app/pokemon.service';
 })
 export class PokemonCardComponent implements OnInit{
 
-  @Input() pokemonUrl : string = "";
+  @Input() pokemons : any;
 
   public pokemon : IPokemon_card = {  id: 0, name: "", sprites : { front_default : ""}};
 
@@ -18,7 +18,7 @@ export class PokemonCardComponent implements OnInit{
   ) { }
 
   ngOnInit () {
-    this.service.informacoesPokemon(this.pokemonUrl).subscribe((pokemon) =>{
+    this.service.informacoesPokemon(this.pokemons.url).subscribe((pokemon) =>{
       this.pokemon = pokemon
     })
   }

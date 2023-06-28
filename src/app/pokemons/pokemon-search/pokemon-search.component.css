@@ -4,15 +4,29 @@
   gap: 20px;
 }
 
-.fav-icon{
+.fav-icon-not-assigned{
   padding: 10px;
   font-size: xx-large;
   border-radius: 10px;
+  color: black;
 }
 
-.fav-icon:hover{
-  transform: scale(1.1);
+.fav-icon-assigned{
+  padding: 10px;
+  font-size: xx-large;
+  border-radius: 10px;
   color: red;
+}
+
+.fav-icon-not-assigned:hover{
+  transform: scale(1.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.fav-icon-assigned:hover{
+  transform: scale(1.1);
   border-radius: 10px;
   cursor: pointer;
   transition: all .3s ease-in-out;

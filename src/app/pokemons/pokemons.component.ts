@@ -1,6 +1,6 @@
 import { FavoritesService } from '../favorites.service';
 import { PokemonService } from './../pokemon.service';
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pokemons',
@@ -11,6 +11,7 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 
 export class PokemonsComponent implements OnInit {
   public getAllPokemons : any;
+  public setAllPokemons : any;
 
   public count : number = 0;
   public limit : number = 30;
@@ -23,8 +24,9 @@ export class PokemonsComponent implements OnInit {
 
   ngOnInit() {
     this.service.listaPokemons(this.offset, this.limit).subscribe((pokemons) => {
-        this.getAllPokemons = pokemons.results
-        this.count = pokemons.count
+      this.setAllPokemons = pokemons.results
+      this.getAllPokemons = pokemons.results
+      this.count = pokemons.count
     })
   }
 
@@ -45,6 +47,14 @@ export class PokemonsComponent implements OnInit {
     }
   }
 
+  onAllFavorites(event : boolean){
+    //console.log(event)
+    if (event)
+      this.getAllPokemons = this.favoritePokemons.getAllFavorites()
+    else
+    this.getAllPokemons = this.setAllPokemons;
+  }
+
   onPreviousPage( page : number ){
     this.offset = this.limit * (page - 1);
     this.service.listaPokemons(this.offset, this.limit).subscribe((pokemons) => {
@@ -56,14 +66,6 @@ export class PokemonsComponent implements OnInit {
     this.offset = this.limit * (page - 1);
     this.service.listaPokemons(this.offset, this.limit).subscribe((pokemons) => {
       this.getAllPokemons = pokemons.results
-    })
-  }
-
-  onAllFavorites(event : boolean){
-    console.log(event)
-    this.favoritePokemons.getAllFavorites().subscribe((pokemons) =>{
-      //this.getAllPokemons = pokemons
-      console.log(pokemons.id)
     })
   }
 
