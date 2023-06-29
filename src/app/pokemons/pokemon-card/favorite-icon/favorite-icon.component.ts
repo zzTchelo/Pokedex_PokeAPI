@@ -17,17 +17,19 @@ export class FavoriteIconComponent implements OnInit{
   i : number = 0;
 
   @Input() pokemonReference : any;
+  private favoritePokemons : any [] = this.storage.getAllFavorites();
 
   constructor(
     private storage : FavoritesService
   ) {}
 
   ngOnInit(): void {
-    if (this.storage.getFavoritePokemonByName(this.pokemonReference.name)){
-      console.log(this.storage.getFavoritePokemonByName(this.pokemonReference.name))
-      console.log(this.pokemonReference)
-      //console.log(this.i++)
-    }
+    this.favoritePokemons.map((pokemon) =>{
+      if (pokemon.name.includes(this.pokemonReference.name)){
+        this.favoriteIconCSS = this.isFavorite;
+        this.favoriteIcon = true
+      }
+    })
   }
 
   setStorageItem(){

@@ -12,10 +12,12 @@ import { Component, OnInit } from '@angular/core';
 export class PokemonsComponent implements OnInit {
   public getAllPokemons : any;
   public setAllPokemons : any;
+  public setFavoritePokemons : any;
 
   public count : number = 0;
   public limit : number = 30;
   private offset : number = 0;
+  private showFavorites : boolean = false;
 
   constructor(
     private service : PokemonService,
@@ -28,6 +30,7 @@ export class PokemonsComponent implements OnInit {
       this.getAllPokemons = pokemons.results
       this.count = pokemons.count
     })
+    this.setFavoritePokemons = this.favoritePokemons.getAllFavorites;
   }
 
   onSearchedTextEntered (searchValue : string) {
@@ -48,11 +51,13 @@ export class PokemonsComponent implements OnInit {
   }
 
   onAllFavorites(event : boolean){
-    //console.log(event)
-    if (event)
+    if (event){
       this.getAllPokemons = this.favoritePokemons.getAllFavorites()
-    else
-    this.getAllPokemons = this.setAllPokemons;
+      this.showFavorites = true
+    }else{
+      this.getAllPokemons = this.setAllPokemons;
+      this.showFavorites = false
+    }
   }
 
   onPreviousPage( page : number ){
