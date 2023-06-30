@@ -5,13 +5,13 @@
     (previous)="onPreviousPage($event)"
     (allFavoritesEvent)="onAllFavorites($event)"
     [count]="count"
-    [limit]="limit"
+    [qtdPerPage]="qtdPerPage"
     >
   </app-pokemon-search>
 
 </div>
 <div class="pokemon-app">
-  <div class="pokemons-card" *ngFor="let pokemon of getAllPokemons">
+  <div class="pokemons-card" *ngFor="let pokemon of getAllPokemons | slice:offset:limit">
     <!-- <div routerLink="/Pokemons/{{pokemon.name}}"> -->
       <div>
         <app-pokemon-card [pokemons]="pokemon"></app-pokemon-card>

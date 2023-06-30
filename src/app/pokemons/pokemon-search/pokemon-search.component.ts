@@ -13,7 +13,6 @@ export class PokemonSearchComponent implements OnInit {
   }
 
   private showFavorites : boolean = false;
-  private showNotFavorites : boolean = false;
 
   private readonly favoriteAssigned : string = "fav-icon-assigned";
   private readonly favoriteNotAssigned : string = "fav-icon-not-assigned";
@@ -23,7 +22,7 @@ export class PokemonSearchComponent implements OnInit {
   public filter : string  = '';
 
   @Input() count : number = 0;
-  @Input() limit : number = 0
+  @Input() qtdPerPage : number = 0
 
   @Output() filteredText : EventEmitter<string> = new EventEmitter<string>();
   @Output() previous : EventEmitter<number> = new EventEmitter<number>();
@@ -33,27 +32,36 @@ export class PokemonSearchComponent implements OnInit {
   AllFavorites(){
     if (!this.showFavorites){
       this.allFavoritesEvent.emit(true);
-      this.showFavorites = true;
       this.favoriteIconCSS = this.favoriteAssigned;
+      this.showFavorites = true;
+      this.filter = '';
+      this.onResetPage();
     } else {
       this.allFavoritesEvent.emit(false);
-      this.showFavorites = false;
       this.favoriteIconCSS = this.favoriteNotAssigned;
+      this.showFavorites = false;
+      this.filter = '';
+      this.onResetPage();
     }
   }
 
   onfilteredText(){
+    this.onResetPage();
     this.filteredText.emit(this.filter);
   }
 
   onNext(){
-    if (this.page < Math.ceil(this.count/this.limit))
+    if (this.page < Math.ceil(this.count/this.qtdPerPage))
       this.next.emit(++this.page)
   }
 
   onPrevious(){
     if (this.page > 1)
       this.next.emit(--this.page)
+  }
+
+  onResetPage(){
+    this.page = 1;
   }
 
 }

@@ -1,9 +1,11 @@
 <div class="pokemons-card">
-  <div class="img-card">
-    <img src="{{ pokemon.sprites.front_default }}" alt="Imagem do Pokemon" class="imagem-pokemon" />
-    <app-favorite-icon [pokemonReference]="pokemons"></app-favorite-icon>
+  <div class="corpo-card">
+    <div class="img-card" routerLink="/Pokemons/{{pokemon.name}}">
+      <img src="{{ pokemon.sprites.front_default }}" alt="Imagem do Pokemon" class="imagem-pokemon" />
+    </div>
+    <app-favorite-icon [pokemonReference]="pokemons" class="favoriteIcon"></app-favorite-icon>
   </div>
-    <label for="pokemon-nome" class="pokemon-nome">
+    <label for="pokemon-nome" class="pokemon-nome" routerLink="/Pokemons/{{pokemon.name}}">
       <strong>#{{ pokemon.id }}</strong>&nbsp;{{ pokemon.name.toUpperCase() }}
     </label>
 </div>

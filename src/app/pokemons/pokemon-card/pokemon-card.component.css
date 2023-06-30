@@ -25,6 +25,7 @@
   color: white;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   border-start-end-radius: 10px;
   border-start-start-radius: 10px;
@@ -35,4 +36,17 @@
 .pokemons-card .pokemon-nome:hover{
   transition: all .3s ease-in-out;
   filter: brightness(1.1);
+}
+
+.corpo-card{
+  position: relative;
+}
+
+.favoriteIcon{
+  position: absolute;
+  z-index: 1;
+
+
+  bottom: 0px;
+  right: 0px;
 }
