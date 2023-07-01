@@ -1,3 +1,4 @@
+import { MatBadgeModule } from '@angular/material/badge';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,6 +17,9 @@ import { LoadMoreButtonComponent } from './pokemons/pokemon/load-more-button/loa
 import { FormsModule } from '@angular/forms';
 import { PokemonSearchComponent } from './pokemons/pokemon-search/pokemon-search.component';
 import { FavoriteIconComponent } from './pokemons/pokemon-card/favorite-icon/favorite-icon.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +40,10 @@ import { FavoriteIconComponent } from './pokemons/pokemon-card/favorite-icon/fav
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

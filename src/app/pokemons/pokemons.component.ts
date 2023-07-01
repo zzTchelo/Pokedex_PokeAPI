@@ -48,23 +48,6 @@ export class PokemonsComponent implements OnInit {
     }
   }
 
-  onSearchedTextEnteredOld (searchValue : string) {
-    if (searchValue.trim().length > 0){
-      this.service.listaPokemons(0, this.count).subscribe((pokemons) => {
-        this.getAllPokemons = pokemons.results.filter((results) => {
-          // -> Retorna pokemon que inicia com o que foi escrito
-          return !results.name.indexOf(searchValue.toLowerCase())
-          // -> Retorna pokemon que contem o que foi escrito
-          //return results.name.includes(searchValue.toLowerCase())
-        })
-      })
-    } else {
-      this.service.listaPokemons(this.offset, this.limit).subscribe((pokemons) => {
-        this.getAllPokemons = pokemons.results
-      })
-    }
-  }
-
   onAllFavorites(event : boolean){
     if (event){
       this.getAllPokemons = this.favoritePokemons.getAllFavorites()

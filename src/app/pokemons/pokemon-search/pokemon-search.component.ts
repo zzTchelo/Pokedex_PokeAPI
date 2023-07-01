@@ -1,4 +1,6 @@
+import { FavoritesService } from './../../favorites.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NotifyService } from 'src/app/notify.service';
 
 @Component({
   selector: 'app-pokemon-search',
@@ -7,9 +9,15 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class PokemonSearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private notify : NotifyService,
+    private FavoritesService : FavoritesService
+  ) { }
 
   ngOnInit() {
+    this.FavoritesService.qtdFavoritos$.subscribe(qtd => {
+      this.qtdFavoritos = qtd;
+    })
   }
 
   private showFavorites : boolean = false;
@@ -17,6 +25,7 @@ export class PokemonSearchComponent implements OnInit {
   private readonly favoriteAssigned : string = "fav-icon-assigned";
   private readonly favoriteNotAssigned : string = "fav-icon-not-assigned";
 
+  public qtdFavoritos : number = 0;
   public favoriteIconCSS : string = this.favoriteNotAssigned;
   public page : number = 1;
   public filter : string  = '';
@@ -31,11 +40,14 @@ export class PokemonSearchComponent implements OnInit {
 
   AllFavorites(){
     if (!this.showFavorites){
-      this.allFavoritesEvent.emit(true);
-      this.favoriteIconCSS = this.favoriteAssigned;
-      this.showFavorites = true;
-      this.filter = '';
-      this.onResetPage();
+      if (this.FavoritesService.getAllFavorites().length > 0){
+        this.allFavoritesEvent.emit(true);
+        this.favoriteIconCSS = this.favoriteAssigned;
+        this.showFavorites = true;
+        this.filter = '';
+        this.onResetPage();
+      } else
+        this.notify.notifyMsg('Nenhum favorito cadastrado!!!', 'OK')
     } else {
       this.allFavoritesEvent.emit(false);
       this.favoriteIconCSS = this.favoriteNotAssigned;

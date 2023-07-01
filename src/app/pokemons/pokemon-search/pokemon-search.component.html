@@ -4,7 +4,14 @@
     <!-- Efeito de pulsação -> fa-beat-fade
       <i class="fa-solid fa-heart fa-beat-fade"></i>
     -->
-    <i class="fa-solid fa-heart"></i>
+    <mat-icon
+      matBadge="{{qtdFavoritos}}"
+      matBadgeColor="warn"
+      matBadgeSize="medium"
+      matBadgePosition="above"
+      >
+      <i class="fa-solid fa-heart"></i>
+    </mat-icon>
   </div>
 
   <div class="input-bar">
