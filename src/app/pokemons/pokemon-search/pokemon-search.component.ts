@@ -59,7 +59,7 @@ export class PokemonSearchComponent implements OnInit {
 
   onfilteredText(){
     this.onResetPage();
-    this.filteredText.emit(this.filter);
+    this.filteredText.emit(this.filter.toLowerCase());
   }
 
   onNext(){
